@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Assets/mini logo.JPG">
+    <title>La Grande Ourse - Restaurant Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="fullscreen-container">
+      <div id="title" class="hidden">La Grande Ourse</div>
+      <!-- Ancien div Contellation -->
+    </div>
+    <div class="constellation">
+      <svg id="bigDipper" width="800" height="500">
+        <!-- Points pour les étoiles -->
+        <circle class="star" cx="50" cy="120" r="5"></circle>
+        <circle class="star" cx="160" cy="100" r="5"></circle>
+        <circle class="star" cx="250" cy="150" r="5"></circle>
+        <circle class="star" cx="380" cy="200" r="5"></circle>
+        <circle class="star" cx="620" cy="170" r="5"></circle>
+        <circle class="star" cx="420" cy="320" r="5"></circle>
+        <circle class="star" cx="610" cy="320" r="5"></circle>
+        <!-- Lignes pour les connexions -->
+        <line class="line" x1="50" y1="120" x2="160" y2="100"></line>
+        <line class="line" x1="160" y1="100" x2="250" y2="150"></line>
+        <line class="line" x1="250" y1="150" x2="380" y2="200"></line>
+        <line class="line" x1="380" y1="200" x2="620" y2="170"></line>
+        <line class="line" x1="380" y1="200" x2="420" y2="320"></line>
+        <line class="line" x1="620" y1="170" x2="610" y2="320"></line>
+        <line class="line" x1="420" y1="320" x2="610" y2="320"></line>
+      </svg>
+    </div>
+    <!-- Navbar qui apparaît après l'animation -->
+    <div class="navbar">
+      <a href="#">Menus</a>
+      <a href="#">Réserver une table</a>
+      <a href="#">Contact</a>
+      <a></a>
+      <img class="imgLogoNav" src="Assets/logo.JPG" >
+    </div>
+    <!-- Section qui sera visible après le scroll -->
+    <section class="content">
+      <div class="imgFace">
+        <div class="containertextIntro">
+          <h2 class="Intro">Bienvenue à La Grande Ourse</h2>
+          <p id="textIntro">
+            Le mois de février est là et la Saint-Valentin approche !
+            <br />Venez partager un moment chaleureux et gourmand dans notre
+            restaurant.
+            <br />
+            A très vite.
+          </p>
+        </div>
+      </div>
+    </section>
+<!------------------1 Container------------------------->
+    <section class="firstContainer">
+      <div class="titleContainer">
+        <h2>Nos engagements</h2>
+      </div>
+        <p class="txtP">Une cuisine maison, des produits frais et de saison !</p>
+      <section class="engagements">
+        <div id="qualite">
+          <i id="logoUstensils" class="fa-solid fa-utensils"></i>
+          <div id="titleQualite">Qualité des produits</div>
+          <div id="txtQualite">
+            Des produits sains, frais et variés,<br />
+            travaillés pour faire vivre vos papilles
+          </div>
+        </div>
+        <div id="saison">
+          <i class="fa-solid fa-seedling"></i>
+          <div id="titleSaison">Carte au gré des saisons</div>
+          <div id="txtSaison">
+            A chaque saison, ses fruits et légumes.<br />
+            A chaque saison, sa nouvelle carte
+          </div>
+        </div>
+        <div id="convivialite">
+          <i class="fa-solid fa-handshake"></i>
+          <div id="titleConvivialite">La convivialité</div>
+          <div id="txtConvivialite">
+            Une cuisine élaborée avec passion,<br />
+            un service à l'écoute pour un repas chaleureux
+          </div>
+        </div>
+      </section>
+<!--------------------------2 Container--------------------------------------->
+      <section class="secondContainer">
+        <div class="titleContainer">
+          <h2>Vos recommandations</h2>
+        </div>
+          <p class="txtP">Merci pour vos retours</p>
+        <p class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <section class="commentaire-container">
+            <span class="name">Nathalie R.</span>
+            <span class="commentaire">"Soirée sympathique, excellent ty-punch, patron super sympa, serveuse super sympathique aussi. 
+              Burger foie gras très très bon. 
+              Allez y les yeux fermés"</span>
+          </section>
+        </p>
+        <p class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <section class="commentaire-container">
+            <span class="name">Céline B.</span>
+            <span class="commentaire">"Restaurant sans prétention, une cuisine excellente, une belle découverte. 
+              Adresse que je mets à présent dans mes favoris. 
+              Personnel sympathique."</span>
+          </section>
+        </p>
+        <p class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <section class="commentaire-container">
+            <span class="name">Annie D.</span>
+            <span class="commentaire">"Nous avons découvert ce restaurant ce soir. Accueil super agréable. Cuisine très raffinée. 
+              Un personnel très professionnel. C'est avec grand plaisir que je recommande ce restaurant. 
+              Hâte d'y retourner car la carte est très variée."</span>
+          </section>
+        </p>
+      </section>
+<!----------------------------3 Container----------------------------------------->
+      <section class="thirdContainer">
+        <div class="titleContainer">
+          <h2>Actualités</h2>
+        </div>
+          <p id="txtP">Le bon cadeau est disponible à La Grande Ourse !</p>
+          <img src="Assets/Bon.JPG" >
+          <span id="txtBon">
+            Offrez un moment gourmand ! 🍽️<br>
+            Notre bon cadeau, valable un an,<br> s’adapte à votre budget et ravira les amateurs de bonne cuisine. 🎁<br>
+            📍 Disponible directement au restaurant.<br>
+            À très bientôt !
+          </span>
+      </section>
+    <section>
+    <footer id="footer">
+      <a class="mentionLegale" id="toggleButton" onclick="toggleText('hiddenMention')">Mentions légales</a>
+      &nbsp;
+      <a href="RGPD.html">Le RGPD</a>
+      <br>
+      <br>
+      <div id="hiddenMention" class="hiddenMention">
+          <strong>© 2025 Tous droits reservés</strong>
+      <div class="containerFooter">
+        <div class="left">
+          <br>
+          <br>
+          <strong>La Grande Ourse</strong>
+          <br>
+          "Société à responsabilité limitée"
+          <br>
+          "Capital social"
+          <br>
+          "Adresse du siege social"
+          <br>
+          "N° SIRET : 844 889 469 00012"
+          <br>
+        </div>
+        <div class="right">
+          <strong>Hebergeur</strong>
+          <br>
+          "Adresse postale"
+          <br>
+          "Email & Telephone"
+        </div>
+      </div>
+      </div>
+    </footer>
+  </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

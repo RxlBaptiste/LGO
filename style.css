@@ -1,0 +1,572 @@
+:root {
+  --bleue: #00033d;
+  --or: #dfbb3b;
+  --monserrat: "Montserrat", sans-serif;
+  --script: "Great Vibes", cursive;
+}
+
+/* Media Queries pour Mobile */
+@media screen and (max-width: 768px) {
+  /* Styles généraux */
+  body {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Ajustement du conteneur principal */
+  .fullscreen-container {
+    width: 100% !important;
+    height: auto !important; /* 
+    padding: 20px !important; */
+  }
+
+  .show-content {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Réduction de la constellation et ajustement de sa position finale */
+  .constellation {
+    transform: scale(0.7) translate(50px, 150px) !important; /* Réduction et déplacement */
+    transform-origin: center center !important;
+    z-index: -10 !important;
+  }
+
+  /* Ajustement de la navbar pour mobile */
+  .navbar {
+    height: auto !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+  }
+
+  .mini-title {
+    transform: scale(0.7) translate(-280px, -275px) !important; /* Réduction et déplacement */
+    width: max-content;
+    z-index: -10 !important;
+  }
+
+  .imgLogoNav {
+    display: flex !important;
+    height: 3em;
+  }
+
+  .navbar a {
+    font-size: 1rem !important;
+    margin: 8px 0 !important;
+    padding: 5px 10px !important;
+  }
+
+  /* Contenu principal */
+  .imgFace {
+    /* 
+    height: 50vh !important; */
+    background-size: cover !important;
+  }
+
+  .containertextIntro {
+    margin: 0 2em !important;
+    padding: 2em 1em !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 8em !important;
+  }
+
+  h2.Intro {
+    font-size: 1.8em !important;
+  }
+
+  #textIntro {
+    width: 95% !important;
+    font-size: 1rem !important;
+    margin: 0 auto !important;
+  }
+
+  /* Sections principales */
+  .firstContainer {
+    padding: 40px 5% !important;
+    margin: 0 auto !important;
+    height: 105vh !important;
+    top: 130vh !important;
+  }
+  .txtP {
+    padding-bottom: 3em !important;
+  }
+
+  #qualite {
+    padding-bottom: 1.5em;
+  }
+
+  .secondContainer {
+    padding: 40px 5% !important;
+    margin: 0 auto !important;
+    height: 110vh !important;
+    top: 90vh !important;
+  }
+  .thirdContainer {
+    padding: 40px 5% !important;
+    margin: 0 auto !important;
+    height: 110vh !important;
+    top: 100vh !important;
+  }
+
+  .engagements {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .fa-handshake,
+  .fa-seedling,
+  .fa-utensils {
+    font-size: 1.8em !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .stars {
+    font-size: 0.5em !important;
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .commentaire-container {
+    text-align: center !important;
+    padding: 0 !important;
+    margin-left: 3em;
+  }
+
+  .name {
+    font-size: 1.1em !important;
+  }
+
+  #footer {
+    padding: 15px !important;
+    text-align: center !important;
+    top: 100vh !important;
+  }
+
+  .containerFooter {
+    flex-direction: column !important;
+  }
+}
+
+/*INTRO*/
+body {
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+
+  background-color: var(--bleue);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.fullscreen-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Prend tout l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00033d; /* Fond bleu pour l'effet étoilé */
+  transition: opacity 1s ease-in-out; /* Ajout du fondu */
+}
+
+.show-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.constellation {
+  position: absolute;
+  transform-origin: center right; /* Point d’ancrage de la réduction */
+}
+
+.animate {
+  animation: shrinkMove 3s ease-in-out forwards; /* Animation déclenchée dynamiquement */
+}
+.animateNav {
+  animation: ToNavConst 3s ease-in-out forwards;
+}
+.animateTitle {
+  animation: ToNavTitle 3s ease-in-out forwards;
+}
+/* Animation de déplacement vers la droite et réduction progressive */
+@keyframes shrinkMove {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(270px) translateY(20px) scale(0.6); /* Déplacement et réduction */
+  }
+}
+
+@keyframes ToNavConst {
+  0% {
+    transform: translateX(270px) translateY(20px) scale(0.6);
+  }
+  100% {
+    transform: translateX(560px) translateY(-420px) scale(0.2);
+  }
+}
+@keyframes ToNavTitle {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translateX(640px) translateY(-465px) scale(0.3);
+  }
+}
+.star {
+  fill: #dfbb3b;
+  opacity: 0; /* Caché au départ */
+  transition: opacity 0.5s ease-in-out; /* Animation de fondu */
+}
+
+.line {
+  stroke: #dfbb3b;
+  stroke-width: 2.5;
+  opacity: 0; /* Caché dès le début */
+  stroke-dasharray: 0; /* Défini dynamiquement */
+  stroke-dashoffset: 0; /* Défini dynamiquement */
+  transition: stroke-dashoffset 1s linear, opacity 0s;
+}
+
+.hidden {
+  opacity: 0;
+  position: fixed;
+  top: -200px; /* Commence hors de l'écran */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5em;
+  color: #dfbb3b;
+  transition: opacity 0.5s ease-in-out, top 2.5s ease-in-out,
+    left 1s ease-in-out;
+}
+
+.show-title {
+  opacity: 1;
+  top: 50%; /* Descend au centre de la page */
+  left: 40%; /* Position finale légèrement à gauche */
+  transform: translate(-50%, -50%);
+}
+.content {
+  /*display: none;  /* Caché au départ */ /*
+  height: 100vh;*/ /* Prend aussi toute la hauteur d'un écran */
+  position: absolute;
+  top: 950px;
+  justify-content: center;
+  align-items: center; /* 
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; */
+}
+
+.show-content {
+  z-index: -1;
+  display: flex;
+  color: #e6e6e6;
+  transform: translateY(-950px);
+  transition: transform 3s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+}
+
+.imgLogoNav {
+  display: none;
+}
+/* Navbar fixe sur le côté droit */
+.navbar {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 210vh;
+  background-color: rgba(0, 3, 20, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  transform: translateX(100%); /* Cachée au début */
+  transition: transform 1s ease-in-out;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #dfbb3b;
+}
+
+/* Déplacement du titre et de la constellation vers la navbar */
+.mini-title {
+  z-index: 6;
+  font-size: 5em; /*Normalement 1.5rem*/
+  position: fixed;
+  color: #dfbb3b;
+}
+
+.mini-constellation {
+  z-index: 6;
+  position: fixed;
+}
+/* Apparition de la navbar */
+.show-navbar {
+  transform: translateX(0);
+}
+
+/*-----------------FIN Intro--------------------*/
+
+/*------------------CONTENT------------------------*/
+.show-img {
+  display: flex;
+  flex-direction: column;
+}
+.imgFace {
+  display: none;
+  background-image: url(Assets/face.JPG);
+  background-color: rgba(0, 3, 20, 0.6);
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-position: center;
+  background-size: cover;
+}
+
+.containertextIntro {
+  padding: 10em 0;
+  margin: 0 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: justify;
+}
+
+h2.Intro {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5em;
+  padding: 0.2em;
+  color: #dfbb3b;
+  border-color: rgba(0, 3, 20);
+  background-color: #041c58;
+  text-decoration: underline;
+}
+#textIntro {
+  color: #dfbb3b;
+  padding: 0.2em;
+  border-color: rgba(0, 3, 20);
+  background-color: #041c58;
+  width: 49%;
+}
+
+.firstContainer {
+  position: relative;
+  top: 70vh; /* Place la section sous l'image */
+  /* right: 15%; */
+  padding: 80px 10%;
+  margin: 0 20em;
+  background-color: white;
+  color: var(--bleue);
+  text-align: center;
+  font-family: var(--monserrat);
+  border-radius: 20px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContainer {
+  /* 
+  height: 20vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--monserrat);
+  font-size: 1.5em;
+}
+
+.txtP {
+  padding-bottom: 5.5em;
+}
+
+.engagements {
+  display: flex;
+  width: 50vw;
+  height: 10vh;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#qualite,
+#saison,
+#convivialite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#titleQualite,
+#titleSaison,
+#titleConvivialite {
+  font-size: 1em;
+  color: var(--bleue);
+  padding-top: 1em;
+  font-weight: 600;
+}
+#txtQualite,
+#txtSaison,
+#txtConvivialite {
+  font-size: 1em;
+  color: var(--bleue);
+  padding-top: 2em;
+  font-style: italic;
+}
+.fa-handshake,
+.fa-seedling,
+.fa-utensils {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 80px;
+  height: 80px;
+  border: solid 1px black;
+  border-radius: 50%;
+  color: var(--bleue);
+}
+/*-------------------------2eme Container-------------------------------*/
+.secondContainer {
+  position: relative;
+  top: 30vh; /* Place la section sous l'image */
+  padding: 80px 10%;
+  background-color: white;
+  color: var(--bleue);
+  text-align: center;
+  font-family: var(--monserrat);
+  border-radius: 20px;
+  height: 75vh;
+}
+.stars {
+  font-size: 0.8em; /* Taille des étoiles */
+  margin-right: 5px; /* Espacement */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: solid 1px black;
+  border-radius: 50%;
+  color: var(--or);
+  height: 80px;
+  width: 80px;
+}
+
+.commentaire-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -12vh;
+  padding-left: 5em;
+}
+
+.name {
+  font-size: 1.5em;
+  padding-bottom: 0.8em;
+  padding-right: 3em;
+  font-weight: 600;
+}
+
+.commentaire {
+  text-align: start;
+  padding-left: 2em;
+}
+
+/*-------------------------3eme Container-------------------------------*/
+.thirdContainer {
+  position: relative;
+  top: 40vh; /* Place la section sous l'image */
+  padding: 80px 10%;
+  background-color: white;
+  color: var(--bleue);
+  text-align: center;
+  font-family: var(--monserrat);
+  border-radius: 20px;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#txtP {
+  padding-bottom: 1.5em;
+}
+#txtBon {
+  padding-top: 3em;
+  font-style: italic;
+}
+
+/*--------------Footer------------------*/
+
+#footer {
+  position: relative;
+  top: 40vh; /* Place la section sous l'image */
+  padding-top: 2em;
+  background-color: white;
+  color: var(--bleue);
+  text-align: center;
+  font-family: var(--monserrat);
+  width: 100vw;
+  margin-top: 5em;
+}
+
+.containerFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  margin-right: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.right {
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mentionLegale {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.hiddenMention {
+  z-index: 100;
+  display: none; /* Caché par défaut */
+}

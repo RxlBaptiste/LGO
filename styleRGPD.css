@@ -1,0 +1,66 @@
+:root {
+  --bleue: #00033d;
+  --or: #dfbb3b;
+  --monserrat: "Montserrat", sans-serif;
+  --script: "Great Vibes", cursive;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--bleue);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: var(--bleue);
+}
+
+h2 {
+  color: var(--or);
+  border-bottom: 2px solid var(--or);
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.date {
+  text-align: center;
+  font-size: 0.9em;
+  color: gray;
+}
+
+p,
+ul {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: var(--bleue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
