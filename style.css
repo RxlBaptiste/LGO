@@ -28,9 +28,10 @@
 
   /* Réduction de la constellation et ajustement de sa position finale */
   .constellation {
-    transform: scale(0.7) translate(50px, 150px) !important; /* Réduction et déplacement */
+    transform: scale(0.7) translate(50px, 750px) !important; /* Réduction et déplacement */
     transform-origin: center center !important;
     z-index: -10 !important;
+    position: relative !important;
   }
 
   /* Ajustement de la navbar pour mobile */
@@ -41,9 +42,10 @@
   }
 
   .mini-title {
-    transform: scale(0.7) translate(-280px, -275px) !important; /* Réduction et déplacement */
+    transform: scale(0.7) translate(-280px, 800px) !important; /* Réduction et déplacement */
     width: max-content;
     z-index: -10 !important;
+    position: relative !important;
   }
 
   .imgLogoNav {
